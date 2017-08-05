@@ -1,0 +1,61 @@
+DS_Capstone
+========================================================
+author:wenlarry
+date:  Aug_3_2017
+autosize: true
+
+Overview
+========================================================
+
+GOTO <https://wenlarry.shinyapps.io/wordpredict>
+
+- Predicts next Word
+
+- Shows top 3 possibilities
+
+- Input 2 to 3 words
+
+Algorithm
+========================================================
+
+- Constructed upto 4 ngrams 
+
+- 'Stupid Backoff' used
+
+- Searched for the 3rd or 4the word from QuadGram to UniGram
+
+- Output 3 works ranked with their probabilities in descending order
+
+Codes
+========================================================
+
+- Raw data provided by JHUBSPH in the form of English texts of news, blogs and   
+  twitters were sampled as training data (800mb)
+
+- The training data were cleaned and tokenized with ngrams upto n=4 constucted 
+  as data
+
+- Stupid Back Off (SBO) applied on the ngrams
+
+- Threshold of 80mb set for the ShinyApp
+
+- Threshold evaluated for accuracies
+
+- Packages used: quanteda, data.table, dplyr and stringi
+
+Constraints
+=========================================================
+
+- App ignores information beyond a QuadGram
+
+- A more sophisticated backoff method like Katz Back Off (KBO) tested to yield
+
+  no superior accuracies than SBO for the threshold of 100 mb of data
+  
+- Another trade off of predictive accuracy, inputs and speed can be taken to 
+  
+  devise another App by tweaking the Algo and Codes
+  
+===========================================================
+
+  
